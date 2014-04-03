@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://www.w3.org/Submission/wadl/wadl.xsd" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="WSDOT" />
+  <resources base="http://www.wsdot.wa.gov/Traffic/api">
+    <resource path="/BorderCrossings/BorderCrossingsREST.svc/GetBorderCrossingsAsJson">
+      <doc title="BorderCrossings/BorderCrossingsREST.svc/GetBorderCrossingsAsJson">Get Border crossing data from WSDOT</doc>
+      <method name="GET">
+        <request>
+          <param name="AccessCode" style="query" type="xs:string" default="{fe9119f3-02ba-4ddb-830c-b7400d48af96}" required="true">
+            <doc>Access code by Ankur</doc>
+            <option value="{fe9119f3-02ba-4ddb-830c-b7400d48af96}" />
+          </param>
+        </request>
+        <response status="200">
+          <doc>MySuccess</doc>
+        </response>
+      </method>
+    </resource>
+    <resource path="/TravelTimes/TravelTimesREST.svc/GetTravelTimesAsJson">
+      <doc title="TravelTimes/TravelTimesREST.svc/GetTravelTimesAsJson">Get travel times</doc>
+      <method name="GET">
+        <request>
+          <param name="AccessCode" style="query" type="xs:string" default="fe9119f3-02ba-4ddb-830c-b7400d48af96">
+            <doc>Access code</doc>
+            <option value="fe9119f3-02ba-4ddb-830c-b7400d48af96" />
+          </param>
+        </request>
+        <response status="200">
+          <doc>MySuccess</doc>
+        </response>
+      </method>
+    </resource>
+    <resource path="/TrafficFlow/TrafficFlowREST.svc/GetTrafficFlowsAsJson">
+      <doc title="TrafficFlow/TrafficFlowREST.svc/GetTrafficFlowsAsJson">Get Traffic flows</doc>
+      <method name="GET">
+        <request>
+          <param name="AccessCode" style="query" type="xs:string" default="fe9119f3-02ba-4ddb-830c-b7400d48af96">
+            <doc>AccessCode by ankur</doc>
+            <option value="fe9119f3-02ba-4ddb-830c-b7400d48af96" />
+          </param>
+        </request>
+        <response status="200" />
+      </method>
+    </resource>
+  </resources>
+</application>
